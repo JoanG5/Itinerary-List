@@ -30,7 +30,9 @@ export default function Home() {
               alt="Welcome Image"
               style={{ marginTop: "1rem", width: "200px", height: "200px" }}
             />
+            <AppSidebar />
           </div>
+          
         ) : (
           <SignIn />
         )}
