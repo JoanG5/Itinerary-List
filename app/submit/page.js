@@ -1,21 +1,24 @@
 "use client";
 
 import React from "react";
-import Submit from "../comp/Submit"
+import Submit from "../comp/Submit";
 import AppSidebar from "../comp/AppSidebar";
-import { db } from "../firebase/config";
-import { addDoc, collection } from "firebase/firestore";
-import { getDocs } from "firebase/firestore";
+import SignIn from "../comp/SignIn";
+import { auth } from "../firebase/config";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function page() {
+  const [user] = useAuthState(auth);
   return (
     <div>
-      <div>
-        <Submit />
-      </div>
-      <div>
-        <AppSidebar />
-      </div>
+      {user ? (
+        <h1>
+          <Submit />
+          <AppSidebar />
+        </h1>
+      ) : (
+        <SignIn />
+      )}
     </div>
   );
 }
