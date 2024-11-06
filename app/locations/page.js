@@ -11,7 +11,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { auth } from "../firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-function page() {
+function LocationTable() {
   const [data, setData] = useState([]);
   const [user] = useAuthState(auth);
 
@@ -61,4 +61,4 @@ function page() {
   );
 }
 
-export default page;
+export default LocationTable;

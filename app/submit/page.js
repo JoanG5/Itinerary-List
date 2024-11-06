@@ -7,7 +7,7 @@ import SignIn from "../comp/SignIn";
 import { auth } from "../firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-function page() {
+function Form() {
   const [user] = useAuthState(auth);
   return (
     <div>
@@ -23,4 +23,4 @@ function page() {
   );
 }
 
-export default page;
+export default Form;
