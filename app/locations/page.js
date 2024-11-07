@@ -10,6 +10,7 @@ import { db } from "../firebase/config";
 import { collection, getDocs } from "firebase/firestore";
 import { auth } from "../firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
+import BottomBar from "../comp/BottomBar";
 
 function LocationTable() {
   const [data, setData] = useState([]);
@@ -52,6 +53,7 @@ function LocationTable() {
           <h1>
             <Location data={data} />
             <AppSidebar />
+            <BottomBar />
           </h1>
         ) : (
           <SignIn />

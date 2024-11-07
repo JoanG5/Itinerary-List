@@ -46,7 +46,7 @@ export default function AppSidebar() {
 
   return (
     <SidebarProvider>
-      <Sidebar collapsible="icon">
+      <Sidebar collapsible="icon" className="w-full md:w-64">
         <SidebarHeader className="flex items-center justify-between px-4">
           <h2 className="text-lg font-semibold tracking-tight group-data-[collapsible=icon]:hidden">
             Location App

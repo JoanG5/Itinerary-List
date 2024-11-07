@@ -6,6 +6,7 @@ import AppSidebar from "../comp/AppSidebar";
 import SignIn from "../comp/SignIn";
 import { auth } from "../firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
+import BottomBar from "../comp/BottomBar";
 
 function Form() {
   const [user] = useAuthState(auth);
@@ -15,6 +16,7 @@ function Form() {
         <h1>
           <Submit />
           <AppSidebar />
+          <BottomBar />
         </h1>
       ) : (
         <SignIn />
